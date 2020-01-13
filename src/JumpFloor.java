@@ -19,11 +19,12 @@ public class JumpFloor {
      * @param n
      * @return
      */
+    public static final int COUNT = 2;
     public static int jumpFloor(int n) {
         if (n <= 0) {
             return 0;
         }
-        if (n <= 2) {
+        if (n <= COUNT) {
             return n;
         }
         int temp = 0;
@@ -52,7 +53,7 @@ public class JumpFloor {
         if (n <= 0) {
             return 0;
         }
-        if (n <= 2) {
+        if (n <= COUNT) {
             return n;
         }
 
