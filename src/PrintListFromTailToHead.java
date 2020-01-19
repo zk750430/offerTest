@@ -19,7 +19,7 @@ public class PrintListFromTailToHead {
         listNode3.next = listNode4;
         listNode4.next = listNode5;
         ArrayList<Integer> arrayList = new ArrayList<>();
-        arrayList = PrintListFromTailToHead.printListFromTailToHead1(listNode1);
+        arrayList = PrintListFromTailToHead.printListFromTailToHead(listNode1);
         System.out.println(arrayList.toString());
     }
 
@@ -32,35 +32,6 @@ public class PrintListFromTailToHead {
         }
         while (!stack.isEmpty()) {
             arrayList.add(stack.pop());
-        }
-        return arrayList;
-    }
-
-    public static ArrayList<Integer> printListFromTailToHead1(ListNode listNode) {
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        ListNode listNode1 = new ListNode(-1);
-        int count = 1;
-        while (listNode != null) {
-            if (listNode1.val == -1) {
-                listNode1.val = listNode.val;
-                listNode1.next = null;
-            } else {
-                ListNode listNode2 = listNode1;
-                while (count > 0) {
-                    listNode1.next = listNode2;
-                    count--;
-                }
-                listNode1.val = listNode.val;
-            }
-
-            System.out.println(listNode1.val);
-
-            listNode = listNode.next;
-
-        }
-        while (listNode1 != null) {
-            arrayList.add(listNode1.val);
-            listNode1 = listNode1.next;
         }
         return arrayList;
     }
